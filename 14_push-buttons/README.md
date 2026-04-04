@@ -1,8 +1,15 @@
-# Lesson 13 - Arrays + RGB Sequence Validation
+# Lesson 14 - Push Buttons and Pull-Up Resistors
+
+<details>
+<summary>Reference video</summary>
+
+[Paul McWhorter - Lesson 17](https://www.youtube.com/watch?v=OkaUMOH6CSI&list=PLGs0VKk2DiYz8js1SJog21cDhkBqyAhC5&index=17)
+
+</details>
 
 ## Objective
 
-Collect a user-defined list of valid colors and replay them as RGB blink sequence.
+
 
 ## Code
 
@@ -10,18 +17,12 @@ Collect a user-defined list of valid colors and replay them as RGB blink sequenc
 
 ## Expected Behavior
 
-1. Program asks for number of blinks.
-2. Program asks for each color and validates it.
-3. Invalid color input is rejected and re-requested (no skipped slot).
-4. The RGB LED blinks each accepted color in order.
+1. 
 
 ## What You Practice
 
-- Input validation with `while True`
-- Membership test using `in`
-- Building and replaying arrays (lists)
-- Combining loops with hardware output timing
+- 
 
 ## Note
 
-Current accepted names include `cian` and `magneta` to match the lesson code.
+
