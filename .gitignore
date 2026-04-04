@@ -4,6 +4,7 @@ Thumbs.db
 
 # Editor / IDE
 .vscode/*
+.vscode/
 !.vscode/extensions.json
 .idea/
 

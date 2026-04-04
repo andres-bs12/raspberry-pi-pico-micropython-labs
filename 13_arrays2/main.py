@@ -29,7 +29,7 @@ while True:
     colorsToReproduce = []
 
     try:
-        numBlinks = int(input('How many blinks? '))  # Carefuk with the int to convert str to int
+        numBlinks = int(input('How many blinks? '))  # Careful with the int to convert str to int
     except ValueError:
         print('invalid number ')
         continue
@@ -41,14 +41,6 @@ while True:
                 colorsToReproduce.append(color)
                 break
             print('invalid color')
-            
-    # for blink in range(0, numBlinks, 1):
-    #     color = input('What Color ').strip().lower()
-    #     if color in availableColors:
-    #         colorsToReproduce.append(color)
-    #     else:
-    #         print('invalid color')
-
 
     for color in colorsToReproduce:
         if (color == "none"):
