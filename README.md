@@ -13,18 +13,19 @@ The project is designed as a practical learning portfolio:
 
 | Lesson | Folder | Topic | Status |
 | --- | --- | --- | --- |
-| 00 | `00_TurnAllOff` | GPIO output basics and safe LED reset | Done |
-| 01 | `01_FirstProject` | Built-in LED blink | Done |
-| 02 | `02_FirstProgram` | Timed LED sequence (SOS-style practice) | Done |
-| 03 | `03_ledsPattern` | Multi-LED animation patterns | Done |
-| 04 | `04_binaryLeds` | Binary representation with LEDs | Done |
-| 05 | `05_If` | Conditional logic with potentiometer thresholds | Done |
-| 06 | `06_ReadingVoltages` | ADC reading and value conversion | Done |
-| 09 | `09_PulseWithModulation` | PWM output from user input | Done |
-| 10 | `10_DimmableLed` | LED dimming with PWM | Done |
-| 11 | `11_ContollinRGBLed` | Interactive RGB color control | Done |
-| 12 | `12_arrays&loops` | Arrays and loop practice in Python | Done |
-| 13 | `13_arrays2` | Validated color list + RGB blink sequence | In progress |
+| 00 | `00_turn-all-off` | GPIO output basics and safe LED reset | Done |
+| 01 | `01_first-project` | Built-in LED blink | Done |
+| 02 | `02_first-program` | Timed LED sequence (SOS-style practice) | Done |
+| 03 | `03_leds-pattern` | Multi-LED animation patterns | Done |
+| 04 | `04_binary-leds` | Binary representation with LEDs | Done |
+| 05 | `05_if` | Conditional logic with potentiometer thresholds | Done |
+| 06 | `06_reading-voltages` | ADC reading and value conversion | Done |
+| 09 | `09_pulse-with-modulation` | PWM output from user input | Done |
+| 10 | `10_dimmable-led` | LED dimming with PWM | Done |
+| 11 | `11_controlling-rgb-led` | Interactive RGB color control | Done |
+| 12 | `12_arrays-and-loops` | Arrays and loop practice in Python | Done |
+| 13 | `13_arrays-2` | Validated color list + RGB blink sequence | In progress |
+| 14 | `14_push-buttons` | Push button input basics | In progress |
 
 ## Hardware
 
@@ -35,6 +36,7 @@ Typical components used across lessons:
 - LEDs (single and RGB)
 - Current-limiting resistors
 - Potentiometer
+- yada yada yada... Or just get the Raspberry Pi Pico Starter Kitfor all-in-one convenience.
 
 ## Software Setup
 
@@ -51,8 +53,8 @@ Typical components used across lessons:
 
 ## Notes About Naming
 
-Some folder names keep original learning-stage spelling for history consistency.
-A future cleanup pass can rename folders and variable names while preserving lesson content.
+Lesson folders now follow one consistent standard:
+`NN_topic-name` using lowercase letters and hyphens.
 
 ## Credits
 
