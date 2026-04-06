@@ -25,7 +25,7 @@ The project is designed as a practical learning portfolio:
 | 11 | `11_controlling-rgb-led` | Interactive RGB color control | Done |
 | 12 | `12_arrays-and-loops` | Arrays and loop practice in Python | Done |
 | 13 | `13_arrays-2` | Validated color list + RGB blink sequence | Done |
-| 14 | `14_push-buttons` | Push button input basics | In progress |
+| 14 | `14_push-buttons` | Push button input basics | Done |
 
 ## Hardware
 
