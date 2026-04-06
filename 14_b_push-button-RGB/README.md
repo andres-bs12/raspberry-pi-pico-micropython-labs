@@ -50,3 +50,4 @@ Current video file:
 
 With pull-up inputs, a released button reads `1` and a pressed button reads `0`.
 If colors look different than expected, verify RGB channel wiring and LED type (common cathode vs common anode).
+Might have to check the yellow color wich is a mix of colors, didn't go as expected, this was just an extra step from the requirements, will figure it out latter :)
