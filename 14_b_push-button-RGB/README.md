@@ -28,7 +28,6 @@ Current video file:
 
 [Watch demo video](demo.mp4)
 
-If your browser or GitHub preview does not render HEIC or MOV reliably, convert to JPG and MP4 and update these links.
 
 ## Expected Behavior
 
