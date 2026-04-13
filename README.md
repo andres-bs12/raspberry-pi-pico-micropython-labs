@@ -32,7 +32,7 @@ The project is designed as a practical learning portfolio:
 
 Typical components used across lessons:
 
-- Raspberry Pi Pico / Pico W
+- Raspberry Pi Pico / Pico W / Pico 2
 - Breadboard and jumper wires
 - LEDs (single and RGB)
 - Current-limiting resistors
