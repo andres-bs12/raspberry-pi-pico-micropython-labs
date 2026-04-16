@@ -27,6 +27,7 @@ The project is designed as a practical learning portfolio:
 | 13 | `13_arrays-2` | Validated color list + RGB blink sequence | Done |
 | 14A | `14_a_push-button` | Push button input basics | Done |
 | 14B | `14_b_push-button-RGB` | Push buttons with RGB color mixing | Done |
+| 15 | `15_Temperature_Humedity_Sensor` | humidity and temperature readings | Done |
 
 ## Hardware
 
