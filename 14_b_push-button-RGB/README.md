@@ -34,7 +34,7 @@ Current video file:
 1. Pressing the red button toggles the red channel.
 2. Pressing the green button toggles the green channel.
 3. Pressing the blue button toggles the blue channel.
-4. Pressing the yellow button toggles yellow using red + green.
+4. Pressing the yellow button toggles yellow using red + green, yeah as you can see The yellow color is kind of orange, if you have any idea how to fix it, let me know.
 5. A button press is detected once per press using edge detection.
 
 ## What You Practice
