@@ -28,6 +28,8 @@ The project is designed as a practical learning portfolio:
 | 14A | `14_a_push-button` | Push button input basics | Done |
 | 14B | `14_b_push-button-RGB` | Push buttons with RGB color mixing | Done |
 | 15 | `15_Temperature_Humedity_Sensor` | humidity and temperature readings | Done |
+| 16A | `16_a_LCD-Display` | LCD1602 over I2C display basics | Blocked (hardware issue) |
+| 16B | `16_b_LCD-Temperature` | LCD temperature display project | Pending |
 
 ## Hardware
 
