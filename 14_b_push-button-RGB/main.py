@@ -50,11 +50,7 @@ while True:
     if lastYellowButtonState == 1 and yellowButtonState == 0:
         yellowOn = not yellowOn
         if yellowOn:
-<<<<<<< HEAD
             redLED.duty_u16(65535) # probar en suma o juntos 
-=======
-            redLED.duty_u16(65535)
->>>>>>> d85760c63a8c13b64ad924ade7bdda9f9fda6bbe
             greenLED.duty_u16(65535)
         else:
             redLED.duty_u16(0)
