@@ -25,13 +25,15 @@ The project is designed as a practical learning portfolio:
 | 11 | `11_controlling-rgb-led` | Interactive RGB color control | Done |
 | 12 | `12_arrays-and-loops` | Arrays and loop practice in Python | Done |
 | 13 | `13_arrays-2` | Validated color list + RGB blink sequence | Done |
-| 14 | `14_push-buttons` | Push button input basics | Done |
+| 14A | `14_a_push-button` | Push button input basics | Done |
+| 14B | `14_b_push-button-RGB` | Push buttons with RGB color mixing | Done |
+| 15 | `15_Temperature_Humedity_Sensor` | humidity and temperature readings | Done |
 
 ## Hardware
 
 Typical components used across lessons:
 
-- Raspberry Pi Pico / Pico W
+- Raspberry Pi Pico / Pico W / Pico 2
 - Breadboard and jumper wires
 - LEDs (single and RGB)
 - Current-limiting resistors

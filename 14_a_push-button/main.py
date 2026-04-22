@@ -16,7 +16,7 @@ lastButtonState = myButton.value()
 while True:
     buttonState = myButton.value() # reads whethe rthe button is pressed or not
 
-    if lastButtonState == 0 and buttonState == 1: # if button was not pressed and now it is
+    if lastButtonState == 1 and buttonState == 0: # if button was not pressed and now it is
         ledState = not ledState # Whetever is now change to the the another
         led1.value(ledState)
         sleep(.1)
