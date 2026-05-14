@@ -9,6 +9,7 @@ except ImportError:
 lcd = LCD()
 lcd.write(0,0,'hello workld')
 while True :
+    lcd.clear
     myName = input('What is your nane?')
     greeting = 'Hello ' + myName
     greeting2 = 'Welcome to my Pi'
