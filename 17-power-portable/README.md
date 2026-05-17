@@ -28,5 +28,3 @@ If you want to debug interactively, remove/rename `main.py` and use the REPL or 
 - `lcd1602.py` in this folder is a minimal driver that expects the I2C backpack address `0x27` or `0x3F`.
 - If you experience `OSError: [Errno 5] EIO` on writes, check wiring, VCC/GND, and try the `test.py` diagnostic in the LCD lesson for further troubleshooting.
 
----
-Files and wiring follow the same conventions used throughout this repository. If you want me to trim the reference photo or include a schematic, tell me which format you prefer.
