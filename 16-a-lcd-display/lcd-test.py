@@ -101,18 +101,23 @@ def raw_backlight_test(i2c, addr, cycles=5):
     print("\n[TEST 1] Raw backlight (without LCD library)")
     print("[TEST 1] Address:", hex(addr))
     print("[TEST 1] If backlight blinks, I2C backpack is alive")
-    for _ in range(cycles):
+    try:
+        for _ in range(cycles):
+            i2c.writeto(addr, bytearray([0x08]))
+            time.sleep_ms(250)
+            i2c.writeto(addr, bytearray([0x00]))
+            time.sleep_ms(250)
         i2c.writeto(addr, bytearray([0x08]))
-        time.sleep_ms(250)
-        i2c.writeto(addr, bytearray([0x00]))
-        time.sleep_ms(250)
-    i2c.writeto(addr, bytearray([0x08]))
+    except OSError as e:
+        print("[TEST 1] I2C write failed:", e)
+        return False
+    return True
 
 
-def text_pattern_test(addr):
+def text_pattern_test(addr, i2c=None):
     print("\n[TEST 2] Library initialization + text")
     print("[TEST 2] Forced address:", hex(addr))
-    lcd = LCD(addr=addr)
+    lcd = LCD(addr=addr, i2c=i2c)
 
     lcd.clear()
     lcd.write(0, 0, "1234567890123456")
@@ -191,11 +196,29 @@ def main():
     else:
         target_addr = all_devices[0]
 
-    raw_backlight_test(i2c_ref, target_addr)
+    preferred_i2c = i2c_ref
+    backlight_ok = raw_backlight_test(i2c_ref, target_addr)
+    if not backlight_ok:
+        print("[INFO] Hardware I2C write failed; trying SoftI2C fallback")
+        try:
+            si2c = machine.SoftI2C(sda=machine.Pin(SDA_PIN), scl=machine.Pin(SCL_PIN), freq=100000)
+            si_devices = si2c.scan()
+            if target_addr in si_devices:
+                print("[INFO] Device seen by SoftI2C:", hex(target_addr))
+                try:
+                    si2c.writeto(target_addr, bytearray([0x08]))
+                    print("[INFO] SoftI2C backlight write succeeded")
+                    preferred_i2c = si2c
+                except Exception as e:
+                    print("[INFO] SoftI2C backlight write failed:", e)
+            else:
+                print("[INFO] SoftI2C did not detect device; scan:", [hex(d) for d in si_devices])
+        except Exception as e:
+            print("[INFO] SoftI2C setup failed:", e)
 
     text_ok = False
     try:
-        text_pattern_test(target_addr)
+        text_pattern_test(target_addr, i2c=preferred_i2c)
         text_ok = True
     except Exception as ex:
         print("[ERROR] Text test failed:", ex)
