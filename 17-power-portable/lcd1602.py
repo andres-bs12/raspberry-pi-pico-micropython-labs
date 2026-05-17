@@ -2,14 +2,11 @@ import machine
 import time
  
 class LCD():
-    def __init__(self, addr=None, blen=1, i2c=None, freq=400000):
-        # If an I2C object is provided, use it (useful to reuse existing bus instance)
-        if i2c is not None:
-            self.bus = i2c
-        else:
-            sda = machine.Pin(6)
-            scl = machine.Pin(7)
-            self.bus = machine.I2C(1, sda=sda, scl=scl, freq=freq)
+    def __init__(self, addr=None, blen=1):
+        sda = machine.Pin(6)
+        scl = machine.Pin(7)
+        self.bus = machine.I2C(1,sda=sda, scl=scl, freq=400000)
+        #print(self.bus.scan())
         self.addr = self.scanAddress(addr)
         self.blen = blen
         self.send_command(0x33) # Must initialize to 8-line mode at first
@@ -45,11 +42,7 @@ class LCD():
             temp |= 0x08
         else:
             temp &= 0xF7
-        try:
-            self.bus.writeto(self.addr, bytearray([temp]))
-        except OSError as e:
-            print("[LCD] I2C write error:", e)
-            raise
+        self.bus.writeto(self.addr, bytearray([temp]))
     
     def send_command(self, cmd):
         # Send bit7-4 firstly

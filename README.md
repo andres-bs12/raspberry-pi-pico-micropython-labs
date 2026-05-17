@@ -30,6 +30,7 @@ The project is designed as a practical learning portfolio:
 | 15 | `15_Temperature_Humedity_Sensor` | humidity and temperature readings | Done |
 | 16A | `16_a_LCD-Display` | LCD1602 over I2C display basics | Done |
 | 16B | `16_b_LCD-Temperature` | LCD1602 + DHT11 integrated | Done |
+| 17 | `17-power-portable` | Portable power demo + LCD1602 status display | Done |
 
 ## Hardware
 
